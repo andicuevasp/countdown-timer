@@ -39,7 +39,7 @@ function displayTimeLeft(seconds) {
 function displayEndTime(timestamp) {
     const end = new Date(timestamp);
     const hour = end.getHours();
-    const adjustedHour = hour > 12 ? hour - 12 : hour;
+    const adjustedHour = hour > 12 ? hour - 12 : hour; // this is so that the time shown is not military time
     const minutes = end.getMinutes();
     endTime.textContent = `Be back at ${adjustedHour}:${minutes < 10 ? "0" : ""}${minutes}`;
 
